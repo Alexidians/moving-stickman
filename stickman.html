@@ -14,11 +14,11 @@ body {
 <script>
 const width = window. innerWidth;
 const height = window. innerHeight;
-document.getElementById("stickman").style.top = height / 2
-document.getElementById("stickman").style.left = width / 2
 function setPosition(top, left) {
- 
+ document.getElementById("stickman").style.top = top;
+ document.getElementById("stickman").style.left = left;
 }
+setPosition(height / 2, width / 2)
 </script>
 </body>
 </html>
