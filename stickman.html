@@ -12,11 +12,35 @@ body {
 <body>
 <img id="stickman" src="stickman.gif"></img>
 <script>
+var speed = 1;
 const width = window. innerWidth;
 const height = window. innerHeight;
 function setPosition(top, left) {
  document.getElementById("stickman").style.top = top - document.getElementById("stickman").height / 2;
  document.getElementById("stickman").style.left = left - document.getElementById("stickman").width / 2;
+}
+
+function goTo(top, left) {
+ var topg = document.getElementById("stickman").style.top - Math.round(top);
+ if (topg > 0) {
+  document.getElementById("stickman").style.top += speed;
+ }
+ else if (topg < 0) {
+  document.getElementById("stickman").style.top -= speed;
+ }
+
+ var leftg = document.getElementById("stickman").style.left - Math.round(left);
+
+ if (leftg > 0) {
+  document.getElementById("stickman").style.left += speed;
+ }
+ else if (leftg < 0) {
+  document.getElementById("stickman").style.left -= speed;
+ }
+
+ if (topg !== 0 && leftg !== 0) {
+  goTo(top, left);
+ }
 }
 setPosition(height / 2, width / 2)
 </script>
