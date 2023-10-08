@@ -1,6 +1,24 @@
 <html>
-<head></head>
+<head>
+<style>
+body {
+ position: relative;
+}
+#stickman {
+ position: absolute;
+}
+</style>
+</head>
 <body>
-<img src="stickman.gif"></img>
+<img id="stickman" src="stickman.gif"></img>
+<script>
+const width = window. innerWidth;
+const height = window. innerHeight;
+document.getElementById("stickman").style.top = height / 2
+document.getElementById("stickman").style.left = width / 2
+function setPosition(top, left) {
+ 
+}
+</script>
 </body>
 </html>
