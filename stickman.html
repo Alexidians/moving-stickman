@@ -15,8 +15,8 @@ body {
 const width = window. innerWidth;
 const height = window. innerHeight;
 function setPosition(top, left) {
- document.getElementById("stickman").style.top = top;
- document.getElementById("stickman").style.left = left;
+ document.getElementById("stickman").style.top = top - document.getElementById("stickman").height / 2;
+ document.getElementById("stickman").style.left = left - document.getElementById("stickman").width / 2;
 }
 setPosition(height / 2, width / 2)
 </script>
