@@ -36,10 +36,10 @@ function goTo(top, left) {
  var leftg = leftpxamount - Math.round(left);
 
  if (leftg > 0) {
-  document.getElementById("stickman").style.left += speed;
+  document.getElementById("stickman").style.left -= speed;
  }
  else if (leftg < 0) {
-  document.getElementById("stickman").style.left -= speed;
+  document.getElementById("stickman").style.left += speed;
  }
 
  if (topg !== 0 && leftg !== 0) {
