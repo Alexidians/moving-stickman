@@ -25,10 +25,10 @@ function goTo(top, left) {
  var toppxamount = toppxstring.split("p")[0]
  var topg = toppxamount - Math.round(top);
  if (topg > 0) {
-  document.getElementById("stickman").style.top += speed;
+  document.getElementById("stickman").style.top -= speed;
  }
  else if (topg < 0) {
-  document.getElementById("stickman").style.top -= speed;
+  document.getElementById("stickman").style.top += speed;
  }
 
  var leftpxstring = document.getElementById("stickman").style.left
