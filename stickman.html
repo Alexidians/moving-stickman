@@ -21,7 +21,9 @@ function setPosition(top, left) {
 }
 
 function goTo(top, left) {
- var topg = document.getElementById("stickman").style.top - Math.round(top);
+ var toppxstring = document.getElementById("stickman").style.top
+ var toppxamount = toppxstring.split("p")[0]
+ var topg = toppxamount - Math.round(top);
  if (topg > 0) {
   document.getElementById("stickman").style.top += speed;
  }
@@ -29,7 +31,9 @@ function goTo(top, left) {
   document.getElementById("stickman").style.top -= speed;
  }
 
- var leftg = document.getElementById("stickman").style.left - Math.round(left);
+ var leftpxstring = document.getElementById("stickman").style.left
+ var leftpxamount = toppxstring.split("p")[0]
+ var leftg = leftpxamount - Math.round(left);
 
  if (leftg > 0) {
   document.getElementById("stickman").style.left += speed;
